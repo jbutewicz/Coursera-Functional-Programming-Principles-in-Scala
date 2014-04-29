@@ -23,7 +23,7 @@ object Main {
    */
   def balance(chars: List[Char]): Boolean = {
     def balanceWithCounter(chars: List[Char], openParen: Int): Boolean = {
-      if (chars.isEmpty) true
+      if (chars.isEmpty) openParen == 0
       else {
         val num =
           if (chars.head == '(') openParen + 1
